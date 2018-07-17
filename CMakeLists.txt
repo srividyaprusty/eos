@@ -84,7 +84,11 @@ IF( WIN32 )
   set(Boost_USE_MULTITHREADED ON)
   set(BOOST_ALL_DYN_LINK OFF) # force dynamic linking for all libraries
 ENDIF(WIN32)
+
+       # This module finds headers and requested component libraries 
+         #   or a CMake package configuration file provided by a "Boost CMake" build.
 FIND_PACKAGE(Boost 1.67 REQUIRED COMPONENTS
+          #Boost libraries by their canonical name
     thread
     date_time
     filesystem
